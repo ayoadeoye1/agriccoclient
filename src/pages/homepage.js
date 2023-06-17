@@ -25,12 +25,14 @@ const HomePage = () => {
             <img height={35} width={35} alt='menu' onClick={() => Don()} src={ resp ? menu2 : menu1} className='font-bold' />
           </div>
           {
-            resp 
+            resp
             &&
-            <div className='fixed top-0 right-0 left-0 bottom-0  pt-5'>
+            <div className='relative bg-slate-300 w-full pt-5'>
               <div  className='sm:hidden shadow-lg absolute top-4 right-6'><div className=' text-white font-bold text-5xl' onClick={() => Don() }>x</div></div><br />
-              <div className='m-4 flex flex-col text-center text-2xl font-semibold font-sans text-white '>
-                <Link className='pl-2'>products</Link><br />
+              <div className='m-4 flex flex-col text-center text-2xl font-semibold font-sans text-black '>
+                <Link onClick={() => Don()} to='/products' className='pl-2'>products</Link>
+                <Link onClick={() => Don()} to='/cart' className='pl-2'>cart</Link>
+                <Link onClick={() => Don()} to='/account' className='pl-2'>account</Link>
               </div>
             </div>
           }
